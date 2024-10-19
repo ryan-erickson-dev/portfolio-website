@@ -1,0 +1,13 @@
+.tabBar {
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: grey;
+
+  button {
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
