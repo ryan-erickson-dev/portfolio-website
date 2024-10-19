@@ -1,19 +1,50 @@
-import { MouseEventHandler, useState } from "react";
+import { ReactElement, useState } from "react";
 import "./TabBar.css";
 
 function TabBar() {
-  const [active, setActive] = useState("About");
+  const [active, setActive] = useState("About Me");
 
-  function tabButtonOnClick() {
-    console.log("clicked");
+  function tabButtonOnClick(event: React.MouseEvent<HTMLButtonElement>) {
+    (event.target as HTMLElement).style.backgroundColor = "blue";
+    setActive((event.target as HTMLElement).textContent!);
   }
 
   return (
     <div className="tabBar">
-      <button onClick={tabButtonOnClick}>About</button>
-      <button>Projects</button>
-      <button>Experience</button>
-      <button>Resume</button>
+      <button
+        onClick={tabButtonOnClick}
+        style={active === "About Me" ? { backgroundColor: "blue" } : {}}
+      >
+        About Me
+      </button>
+
+      <button
+        onClick={tabButtonOnClick}
+        style={active === "Experience" ? { backgroundColor: "blue" } : {}}
+      >
+        Experience
+      </button>
+
+      <button
+        onClick={tabButtonOnClick}
+        style={active === "Activity" ? { backgroundColor: "blue" } : {}}
+      >
+        Activity
+      </button>
+
+      <button
+        onClick={tabButtonOnClick}
+        style={active === "Projects" ? { backgroundColor: "blue" } : {}}
+      >
+        Projects
+      </button>
+
+      <button
+        onClick={tabButtonOnClick}
+        style={active === "Resume" ? { backgroundColor: "blue" } : {}}
+      >
+        Resume
+      </button>
     </div>
   );
 }
