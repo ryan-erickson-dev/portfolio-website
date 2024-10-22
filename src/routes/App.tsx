@@ -1,10 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
-import TabBar from "./TabBar";
+import TabBar from "../components/TabBar.tsx";
 import "./App.css";
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   return (
@@ -35,5 +35,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -1,7 +1,7 @@
-import { ReactElement, useState } from "react";
+import { useState } from "react";
 import "./TabBar.css";
 
-function TabBar() {
+export default function TabBar() {
   const [active, setActive] = useState("About Me");
 
   function tabButtonOnClick(event: React.MouseEvent<HTMLButtonElement>) {
@@ -48,5 +48,3 @@ function TabBar() {
     </div>
   );
 }
-
-export default TabBar;
